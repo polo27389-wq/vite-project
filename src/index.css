@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+    --brandColor: #3b82f6;
+    --brandHoverColor: #0153d2e8;
+    --textColor:   #0f172a;
+    --textHoverColor: #fff;
+    --mutedColor:  #64748b;
+    --borderColor: #e7e7e7;
+    --radius: 10px;
+    --lg-radius: 20px;
+    --gap:    1.5rem;
+}
+
+.dark {
+    --brandColor: #f63b3b;
+    --brandHoverColor: #8201d2e8;
+    --textColor:   #0f172a;
+    --textHoverColor: #fff;
+    --mutedColor:  #64748b;
+    --radius: 10px;
+    --lg-radius: 20px;
+    --gap:    1.5rem; 
+}
+
+
+body {
+    color: var(--textColor);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.center-title {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.active {
+    color: var(--brandHoverColor);
+}
+
+
+.btn {
+    all:unset;
+    margin-top: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: var(--mutedColor);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--brandHoverColor);
+}
+
+.btn-primary {
+    background: var(--brandColor); 
+    color: #fff; 
+}
+

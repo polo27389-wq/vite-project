@@ -1,0 +1,42 @@
+
+
+/* products  */
+.products {
+    margin-bottom: 20px;
+}
+
+.products-continer {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    gap: 5px;
+}
+
+
+.product-card img {
+    border-radius: var(--radius);
+}
+
+
+.product-card h3 {
+    text-align: center;
+}
+
+.product-card p {
+    color: var(--mutedColor);
+}
+
+.product-card button {
+    padding: 4px 8px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}

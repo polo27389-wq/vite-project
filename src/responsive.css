@@ -1,0 +1,55 @@
+
+
+/* Tablet screen */
+@media (max-width: 768px) {
+    body{
+        font-size: 10px;
+    }
+
+    .hero { 
+        flex-direction: column-reverse; 
+    }
+
+    header .navbar ul {
+        display: none;
+    }
+
+    header .navbar .btn {
+        display: none;
+    }
+
+    header .navbar .burger-menu {
+        display: block;
+        height: 24px;
+        cursor: pointer;
+    }
+
+    
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .products-continer {
+         grid-template-columns: repeat(2, 200px);
+    }
+
+}
+
+
+/* Mobile Screen */
+
+@media (max-width: 375px) {
+    .products-continer {
+         grid-template-columns: repeat(1, 300px);
+    }
+
+    .hero .hero-text {
+        padding: 0 20px;
+    }
+
+    .hero .hero-text p {
+        margin: 10px 0;
+    }
+
+}

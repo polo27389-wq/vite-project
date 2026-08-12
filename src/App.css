@@ -1,0 +1,91 @@
+
+
+/* Header Start */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: auto;
+}
+
+header .brand {
+    color: var(--brandColor);
+}
+
+header .navbar {
+    display: flex;
+    gap: 50px;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+}
+
+header .navbar .burger-menu {
+    display: none;
+}
+
+
+
+
+header .navbar ul li a {
+    color: var(--textColor);
+}
+
+header .navbar ul li a.active {
+    color:blue 
+}
+
+header .navbar ul li a:hover {
+    color: var(--brandColor);
+}
+
+header .navbar .btn {
+    border: none;
+}
+
+
+
+main {
+    max-width: 1024px;
+    margin: auto;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+.hero .hero-text {
+    max-width: 400px;
+}
+
+.hero .hero-text .cta-btns {
+    display: flex;
+    gap:20px;
+}
+
+.hero img {
+    width: 50vw;
+}
+
+
+.rate {
+    display: flex;
+    gap: 20px;
+}
+
+.rate p {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
