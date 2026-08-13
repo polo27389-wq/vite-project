@@ -23,7 +23,7 @@ export default function Header({ storeName }) {
                 </h1>
 
                 {}
-                <nav className="flex items-center gap-6">
+                <nav className="relative flex items-center gap-6">
                     <ul className="hidden md:flex items-center gap-6">
                         <li>
                             <NavLink className="hover:text-blue-600" end to="/">
@@ -60,6 +60,15 @@ export default function Header({ storeName }) {
                             <FaXmark size={32} />
                         )}
                     </button>
+
+                    {menuState === "opened" && (
+                        <ul className="mobile-menu md:hidden">
+                            <li><NavLink end to="/" onClick={toggleMenu}>Home</NavLink></li>
+                            <li><NavLink to="/products" onClick={toggleMenu}>Products</NavLink></li>
+                            <li><NavLink to="/about" onClick={toggleMenu}>About</NavLink></li>
+                            <li><Link to="/cart" onClick={toggleMenu}>Cart ({items.length})</Link></li>
+                        </ul>
+                    )}
                 </nav>
             </div>
         </header>
