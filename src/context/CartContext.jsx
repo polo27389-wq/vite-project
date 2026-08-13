@@ -1,19 +1,19 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const CartContext = createContext(); // 1. create context
+const CartContext = createContext(); 
 
 export function CartProvider({children}) {
-    const [items, setItems] = useState(()=> JSON.parse(localStorage.getItem('cart')) || []);   // 2. create shared data
+    const [items, setItems] = useState(()=> JSON.parse(localStorage.getItem('cart')) || []);   
 
     function addToCart(product) {
         setItems(prev => {
         const found = prev.find(i => i.id === product.id);
-        if (found) {                            // already in cart → bump qty
+        if (found) {                            
             return prev.map(i =>
             i.id === product.id ? { ...i, qty: i.qty + 1 } : i
             );
         }
-        return [...prev, { ...product, qty: 1 }];   // new → append with qty 1
+        return [...prev, { ...product, qty: 1 }];   
         });
     }
 
@@ -48,7 +48,7 @@ export function CartProvider({children}) {
     }, [items])
 
     return (
-        <CartContext.Provider value={ {items , addToCart , removeFromCart , decreaseQtyFromCart} } > {/* 3. Create provider send data */} 
+        <CartContext.Provider value={ {items , addToCart , removeFromCart , decreaseQtyFromCart} }>
             {children}
         </CartContext.Provider>
     )

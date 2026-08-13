@@ -2,6 +2,7 @@ import './ProductsSection.css'
 import { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import ProductsList from './ProductsList';
+import { gymProducts } from '../data/gymProducts';
 
 function ProductsSection() {
   let [products, setProducts] = useState([]);
@@ -12,22 +13,12 @@ function ProductsSection() {
 
 
   useEffect(() => {
-    setLoading("Loading data from backend.....")
-    fetch('https://dummyjson.com/products').then((res) => {
-      console.log(res);
-      if (res.ok) {
-        return res.json()
-      } else {
-        setError("BackEnd can't found the data")
-        return []
-      }
-    }).then((data) => {
-      setProducts(data.products)
-      setVisableProducts(data.products)
+    setLoading("Loading gym products.....")
+    setTimeout(() => {
+      setProducts(gymProducts)
+      setVisableProducts(gymProducts)
       setLoading(null)
-    } )
-
-
+    }, 500)
   }, [])
 
   if (error) {

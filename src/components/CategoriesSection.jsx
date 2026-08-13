@@ -1,24 +1,23 @@
 import { useEffect, useState } from 'react'
 import './CategoriesSection.css'
 import { Link } from 'react-router-dom';
+import { gymCategories } from '../data/gymProducts';
 
 function CategoriesSection() {
     const [categories , setCategories] = useState([]); 
 
     useEffect(()=>{
-      fetch("https://dummyjson.com/products/categories")
-        .then((res) => res.json())
-        .then((data)=> setCategories(data))
+      setCategories(gymCategories)
     } ,[])
 
 
 
   return (
     <>
-        <h2 className="center-title">Categories</h2>
+        <h2 className="center-title">Gym Categories</h2>
         <section className="categories">
-            {categories.map((categoryObject)=> {
-              return (<Link to={`/prodcuts-category/${categoryObject.slug}`} key={categoryObject.slug} className="category-card">{categoryObject.name}</Link>)
+            {categories.map((category)=> {
+              return (<Link to={`/prodcuts-category/${category.toLowerCase()}`} key={category} className="category-card">{category}</Link>)
             })}
         </section>
     </>

@@ -4,8 +4,7 @@ import { useCart } from "../context/CartContext";
 export default function CartPage() {
   const { items , removeFromCart , addToCart , decreaseQtyFromCart} = useCart();
 
-  // const total = items.reduce((sum, item) => sum + (item.price * item.qty) , 0);
-  // Equivalent to
+
   let total = 0;
   for (let i = 0; i < items.length; i++) {
     const element = items[i];
@@ -47,7 +46,6 @@ export default function CartPage() {
                 <span>{i.qty}</span>
                 <button className="bg-[var(--brandColor)] border-[var(--brandColor)] text-white hover:bg-blue-800 hover:cursor-pointer border-2 rounded-full justify-center flex text-center items-center w-8 h-8" onClick={()=> decreaseQtyFromCart(i.id) }>-</button>
               </div>
-            {/* Remove */}
             <button className="border-[#64748b] border-2 btn" onClick={()=> removeFromCart(i.id)} >Remove from cart</button>
             </div>
           </div>

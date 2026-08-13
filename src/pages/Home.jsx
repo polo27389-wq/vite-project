@@ -5,10 +5,10 @@ import ProductsSection from '../components/ProductsSection'
 export default function Home() {
 
   return (
-    <>
+    <div className="page-white">
       <Hero />
       <CategoriesSection />
       <ProductsSection />
-    </>
+    </div>
   )
 }

@@ -13,16 +13,16 @@ export default function ProductDetails() {
     console.log("handelAdding")
     let product2 = {
       id: id , 
-      title: product.name,
+      title: product.title,
       price: product.price,
-      image: product.image
+      image: product.images[0]
     }
     addToCart(product2)
   }
 
 
   function discount(price, percent) {
-    let discountValue = price * percent; // 100 * 0.1 == 10
+    let discountValue = price * percent; 
     let result = price - discountValue;
     return result.toFixed(2);
   }
@@ -51,9 +51,8 @@ export default function ProductDetails() {
         <img src={product.images[0]} alt="product" />
       </div>
       <div className="product-info  flex flex-col gap-2 max-w-1/2 h-screen justify-center">
-        {/* Title */}
         <h2 className="text-2xl">{product.title}</h2>
-        {/* Rating */}
+        
         <div className="flex gap-2 items-center">
           <div className="flex gap-0.5">
             <FaStar />
@@ -62,7 +61,6 @@ export default function ProductDetails() {
           </div>
           <p> {product.rating} by {product.reviews.length} user</p>
         </div>
-        {/* Price */}
         <div className="flex gap-2 border border-blue-500 rounded-xl w-fit p-2">
           <div >
             <p className="text-lg">${discount(product.price , 10.48/100 )}</p>
@@ -73,14 +71,12 @@ export default function ProductDetails() {
             <p>DISCOUND</p>            
           </div>
         </div>
-        {/* Desc */}
         <p>{product.description}</p>
-        {/* Categories */}
+        
         <h3>Categories:</h3>
         <div className="">
           <p className="border w-fit p-1 border-blue-600 rounded-md bg-blue-500 text-white">{product.category}</p>
         </div>
-        {/* Add to Cart Btn */}
         <button onClick={handelAdding} className="btn">Add to cart 🛒</button>
       </div>
     </div>

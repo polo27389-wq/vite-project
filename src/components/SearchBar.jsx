@@ -15,8 +15,8 @@ export default function SearchBar({ products , setVisableProducts}) {
     <input
       value={q}
       onChange={(e) => {
-        setQ(e.target.value);          // 1. update state
-        console.log("Typing:", q);  // 2. watch it live
+        setQ(e.target.value);          
+        console.log("Typing:", q);  
       }}
       placeholder="Search products…"
     />
