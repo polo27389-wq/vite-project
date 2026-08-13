@@ -1,3 +1,12 @@
+import photo1 from '../../image/photo_1_2026-08-12_23-24-33.jpg';
+import photo2 from '../../image/photo_2_2026-08-12_23-24-33.jpg';
+import photo3 from '../../image/photo_3_2026-08-12_23-24-33.jpg';
+import photo4 from '../../image/photo_4_2026-08-12_23-24-33.jpg';
+import photo5 from '../../image/photo_5_2026-08-12_23-24-33.jpg';
+import photo6 from '../../image/photo_6_2026-08-12_23-24-33.jpg';
+import photo7 from '../../image/photo_7_2026-08-12_23-24-33.jpg';
+import photo8 from '../../image/photo_8_2026-08-12_23-24-33.jpg';
+
 export const gymProducts = [
   {
     id: 1,
@@ -5,7 +14,7 @@ export const gymProducts = [
     price: 299.99,
     category: "Dumbbells",
     rating: 4.5,
-    images: ["/image/photo_1_2026-08-12_23-24-33.jpg"],
+    images: [photo1],
     description: "20-50 lbs adjustable pair. Great for home workouts"
   },
   {
@@ -14,7 +23,7 @@ export const gymProducts = [
     price: 189.99,
     category: "Barbells",
     rating: 4.8,
-    images: ["/image/photo_2_2026-08-12_23-24-33.jpg"],
+    images: [photo2],
     description: "Solid steel barbell with good grip"
   },
   {
@@ -23,7 +32,7 @@ export const gymProducts = [
     price: 149.99,
     category: "Weight Plates",
     rating: 4.6,
-    images: ["/image/photo_3_2026-08-12_23-24-33.jpg"],
+    images: [photo3],
     description: "Mixed plate set for barbell training"
   },
   {
@@ -32,7 +41,7 @@ export const gymProducts = [
     price: 249.99,
     category: "Benches",
     rating: 4.7,
-    images: ["/image/photo_4_2026-08-12_23-24-33.jpg"],
+    images: [photo4],
     description: "Incline/decline bench for home gym"
   },
   {
@@ -41,7 +50,7 @@ export const gymProducts = [
     price: 499.99,
     category: "Racks",
     rating: 4.9,
-    images: ["/image/photo_5_2026-08-12_23-24-33.jpg"],
+    images: [photo5],
     description: "Heavy duty squat rack with safety bars"
   },
   {
@@ -50,7 +59,7 @@ export const gymProducts = [
     price: 79.99,
     category: "Pull-up Bars",
     rating: 4.4,
-    images: ["/image/photo_6_2026-08-12_23-24-33.jpg"],
+    images: [photo6],
     description: "Fits standard door frames. Max 300 lbs"
   },
   {
@@ -59,7 +68,7 @@ export const gymProducts = [
     price: 59.99,
     category: "Bands",
     rating: 4.3,
-    images: ["/image/photo_7_2026-08-12_23-24-33.jpg"],
+    images: [photo7],
     description: "Light to heavy resistance bands"
   },
   {
@@ -68,7 +77,7 @@ export const gymProducts = [
     price: 49.99,
     category: "Mats",
     rating: 4.5,
-    images: ["/image/photo_8_2026-08-12_23-24-33.jpg"],
+    images: [photo8],
     description: "6mm thick mat for floor exercises. Non-slip surface"
   }
 ];

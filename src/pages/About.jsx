@@ -1,5 +1,6 @@
 
 import './About.css'
+import gymEquipmentImage from '../../image/photo_5_2026-08-12_23-24-33.jpg';
 
 export default function About() {
   return (
@@ -7,7 +8,7 @@ export default function About() {
     <section className="about">
       <h2 className="center-title">About FitHub</h2>
       <div className="about-content">
-        <img src="/image/photo_5_2026-08-12_23-24-33.jpg" alt="Gym equipment" />
+        <img src={gymEquipmentImage} alt="Gym equipment" />
         <div className="about-text">
           <p>
             FitHub started when Ahmed and I were frustrated finding solid gym equipment locally.
